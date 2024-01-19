@@ -1,6 +1,10 @@
-##!/usr/bin/pup
-# Using Puppet to install flask from pip3
-package {'flask':
+# install puppet-lint -v 2.5.0
+
+package { 'Flask':
   ensure   => '2.1.0',
-  provider => 'pip3'
+  provider => 'pip3',
+}
+
+exec { 'puppet-lint':
+  command => '/usr/bin/apt-get -y install puppet-lint -v 2.5.0',
 }
