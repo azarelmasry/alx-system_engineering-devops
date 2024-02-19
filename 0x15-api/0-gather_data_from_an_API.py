@@ -11,8 +11,7 @@ if __name__ == '__main__':
     userId = argv[1]
 
     # Retrieve user information from the API
-    user = get("https://jsonplaceholder.typicode.com/users/{}".format(userId))
-    
+    user = get("https://jsonplaceholder.typicode.com/users/{}".format(userId)) 
     # Extract the user's name from the response
     name = user.json().get('name')
 
